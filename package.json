@@ -4,11 +4,11 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.72",
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "request": "^2.88.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
