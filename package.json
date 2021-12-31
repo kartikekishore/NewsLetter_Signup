@@ -1,0 +1,25 @@
+{
+  "name": "newsletter_signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartikekishore/NewsLetter_Signup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kartikekishore/NewsLetter_Signup/issues"
+  },
+  "homepage": "https://github.com/kartikekishore/NewsLetter_Signup#readme"
+}
