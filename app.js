@@ -7,6 +7,8 @@ const { options } = require("request");
 
 const app = express();
 
+const Port=(process.env.PORT||3000);
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -32,15 +34,28 @@ app.post("/",function(req,res){
     auth:"kary:30b3ff7bce30d47af926ba7984ecf300-us20"
  }
  const request= https.request(url,options,function(response){
+
+    if(response.statusCode===200)
+    {
+      res.sendFile(__dirname+"/success.html");
+    }
+    else{
+      res.sendFile(__dirname+"/failure.html");
+    }
     response.on("data",function(data){
       console.log(JSON.parse(data));
     })
   })
   request.write(jsonData);
   request.end();
-});
 
-app.listen(3000, function () {
+
+});
+app.post("/failure",(req,res)=>{
+  res.redirect("/");
+})
+
+app.listen(Port, function () {
   console.log("listening on port 3000.");
 });
 
